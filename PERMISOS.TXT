@@ -1,0 +1,35 @@
+SEGUN EXPERIENCIA DE UN USUARIO EN EL CONGIF.XML CAMBIAR POR ESTE
+
+<plugin name=”cordova-plugin-geolocation” spec=”2.4.3″ />
+
+
+
+(in app/AndroidManifest.xml)
+
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+
+Config.xml
+
+<!-- IOS -->
+<platform name="ios">
+   <preference name="orientation" value="portrait" />
+</platform>
+              <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
+              <array>
+                <string>NSLocationAlwaysUsageDescription</string>
+              </array>
+<feature name="Geolocation">
+    <param name="ios-package" value="CDVLocation" />
+</feature>
+
+<!-- Android -->
+<feature name="Geolocation">
+    <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+</feature>
+
+
+<!-- Plugin -->
+<gap:plugin name="cordova-plugin-geolocation" source="npm"/>
